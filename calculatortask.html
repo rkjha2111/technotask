@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color:pink;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      width: 300px;
+      margin: auto;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    input[type="button"] {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      background-color: #e0e0e0;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    input[type="button"]:hover {
+      background-color: #d4d4d4;
+    }
+    input[type="button"]:active {
+      background-color: #b8b8b8;
+    }
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 24px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      text-align: right;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
+    }
+    .row {
+      margin-bottom: 10px;
+    }
+    .row:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="row">
+      <input type="button" value="7" onclick="addToDisplay('7')">
+      <input type="button" value="8" onclick="addToDisplay('8')">
+      <input type="button" value="9" onclick="addToDisplay('9')">
+      <input type="button" value="/" onclick="addToDisplay('/')">
+    </div>
+    <div class="row">
+      <input type="button" value="4" onclick="addToDisplay('4')">
+      <input type="button" value="5" onclick="addToDisplay('5')">
+      <input type="button" value="6" onclick="addToDisplay('6')">
+      <input type="button" value="*" onclick="addToDisplay('*')">
+    </div>
+    <div class="row">
+      <input type="button" value="1" onclick="addToDisplay('1')">
+      <input type="button" value="2" onclick="addToDisplay('2')">
+      <input type="button" value="3" onclick="addToDisplay('3')">
+      <input type="button" value="-" onclick="addToDisplay('-')">
+    </div>
+    <div class="row">
+      <input type="button" value="0" onclick="addToDisplay('0')">
+      <input type="button" value="." onclick="addToDisplay('.')">
+      <input type="button" value="=" onclick="calculate()">
+      <input type="button" value="+" onclick="addToDisplay('+')">
+    </div>
+    <div class="row">
+      <input type="button" value="C" onclick="clearDisplay()">
+    </div>
+  </div>
+
+  <script>
+    function addToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function calculate() {
+      let display = document.getElementById('display');
+      try {
+        display.value = eval(display.value);
+      } catch (error) {
+        display.value = 'Error';
+      }
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+  </script>
+</body>
+</html>

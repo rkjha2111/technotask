@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Network Profile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: skyblue;
+      color: Black;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .friend-list {
+      flex: 1;
+    }
+
+    .friend-list h2 {
+      margin-bottom: 10px;
+    }
+
+    .friend-list ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .friend-list ul li {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .friend-list ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 2px solid #333;
+      border-radius: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color:pink ;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="profile">
+      <div class="profile-info">
+        <img src="img/IMG_20230224_190408.jpg" alt="Profile Picture">
+        <h1>Radha Krishna</h1>
+        <p>Web Developer</p>
+        <p>Location: Phagwara, Punjab</p>
+        <p>Email: rkjha2652@gmail.com</p>
+      </div>
+      <div class="friend-list">
+        <h2>Friends</h2>
+        <ul>
+          <li><img src="img/bg.jfif" alt="Friend 1"></li>
+          <li><img src="img/IMG_20230224_190408.jpg" alt="Friend 2"></li>
+          <li><img src="/img/IMG_20230225_161632.jpg" alt="Friend 3"></li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Footer.</p>
+  </footer>
+</body>
+</html>
